@@ -1,0 +1,304 @@
+Para criar um código que utilize um vetor para determinar o passado, o futuro e prever o próximo passado e o próximo futuro, podemos estender o exemplo anterior. Vamos imaginar que temos uma sequência binária que representa eventos ao longo do tempo. Podemos usar essa sequência para identificar padrões e fazer previsões.
+
+### Código em Python
+
+```python
+def capturar_frequencias(sequencia, padroes):
+    frequencias = {padrao: 0 for padrao in padroes}
+    
+    for i in range(len(sequencia) - len(padroes[0]) + 1):
+        sub_sequencia = sequencia[i:i + len(padroes[0])]
+        if sub_sequencia in frequencias:
+            frequencias[sub_sequencia] += 1
+            
+    return frequencias
+
+def prever_proximo(sequencia, padrao_tamanho):
+    if len(sequencia) < 2 * padrao_tamanho:
+        return None, None
+    
+    passado = sequencia[-2*padrao_tamanho:-padrao_tamanho]
+    futuro = sequencia[-padrao_tamanho:]
+    
+    proximo_passado = sequencia[-3*padrao_tamanho:-2*padrao_tamanho] if len(sequencia) >= 3 * padrao_tamanho else None
+    proximo_futuro = sequencia[-padrao_tamanho:] + sequencia[-padrao_tamanho:] if len(sequencia) >= padrao_tamanho else None
+    
+    return passado, futuro, proximo_passado, proximo_futuro
+
+# Exemplo de uso
+sequencia = "0100010001000111"
+padroes = ["01", "0100", "1000", "0111"]
+
+frequencias = capturar_frequencias(sequencia, padroes)
+print("Frequências dos padrões:")
+for padrao, frequencia in frequencias.items():
+    print(f"Frequência do padrão {padrao}: {frequencia}")
+
+passado, futuro, proximo_passado, proximo_futuro = prever_proximo(sequencia, 4)
+
+print("\nAnálise temporal:")
+print(f"Passado: {passado}")
+print(f"Futuro: {futuro}")
+print(f"Próximo passado: {proximo_passado}")
+print(f"Próximo futuro: {proximo_futuro}")
+```
+
+### Relatório
+
+#### Situação
+
+Este código expande a análise de padrões binários para incluir a previsão do passado e do futuro com base em uma sequência temporal. A função `prever_proximo` toma uma sequência binária e determina o passado e o futuro recente, assim como prevê o próximo passado e o próximo futuro com base nos padrões detectados.
+
+#### Importância para Tecnologia Espacial
+
+No contexto da tecnologia espacial, prever eventos futuros com base em padrões passados é crucial para a navegação e a segurança. Por exemplo, ao analisar dados de sensores de naves espaciais ou satélites, padrões de falhas ou anomalias podem ser identificados e usados para prever e evitar problemas futuros. Isso pode aumentar a segurança e a eficiência das missões espaciais.
+
+#### Defesa Planetária
+
+Para a defesa planetária, a capacidade de prever eventos futuros com base em dados passados é essencial para a resposta a ameaças, como a aproximação de asteroides. Analisando padrões em dados históricos, podemos prever futuras aproximações e desenvolver estratégias de mitigação mais eficazes. Isso é vital para proteger a Terra de possíveis impactos.
+
+#### Evolução de RNA
+
+Na biologia molecular, a previsão de mutações futuras ou padrões de evolução com base em dados passados pode levar a avanços significativos na medicina. Compreender como sequências de RNA evoluem ao longo do tempo pode ajudar na criação de terapias genéticas mais eficazes e na prevenção de doenças hereditárias.
+
+#### Grande Filtro de Propriedades de Possíveis Vidas Evolutivas
+
+No contexto do Grande Filtro, prever padrões futuros em sinais recebidos do espaço pode ajudar a identificar possíveis formas de vida extraterrestre. Detectar e analisar padrões anômalos em sinais pode fornecer pistas sobre a existência de civilizações avançadas e suas tecnologias. Isso pode ser um passo crucial na busca por vida além da Terra.
+
+### Conclusão
+
+A análise e previsão de padrões binários temporais têm aplicações importantes em várias áreas, desde a tecnologia espacial até a biologia molecular. Melhorar essas técnicas pode levar a avanços na segurança espacial, na defesa planetária, na compreensão da evolução do RNA e na busca por vida extraterrestre, contribuindo para o progresso científico e tecnológico da humanidade.
+
+
+___________________________________________________________________###__________________________
+
+要创建一个使用向量来确定过去、未来并预测下一个过去和下一个未来的代码，我们可以扩展前面的示例。让我们想象一下，我们有一个二进制序列，表示随着时间推移发生的事件。我们可以使用这个序列来识别模式并进行预测。
+
+#### Python 代码
+
+```python
+def capture_frequencies(sequence, patterns)：
+    frequencies = {pattern: 0 for pattern in patterns}
+    
+    for i in range(len(sequence) - len(patterns[0]) + 1)：
+        sub_sequence = sequence[i:i + len(patterns[0])].
+        if sub_sequence in frequencies：
+            frequencies[sub_sequence] += 1
+            
+    返回频率
+
+def predict_next(sequence, pattern_size)：
+    如果 len(sequence) < 2 * size_pattern：
+        return None, None
+    
+    过去 = sequence[-2*pattern_size:-pattern_size]
+    future = sequence[-size_pattern:]
+    
+    next_future = sequence[-3*size_pattern:-2*size_pattern] if len(sequence) >= 3 * size_pattern else None
+    next_future = sequence[-size_pattern:] + sequence[-size_pattern:] if len(sequence) >= size_pattern else None
+    
+    return past, future, next_past, next_future
+
+# 使用示例
+sequence = "0100010001000111"
+patterns = ["01"、"0100"、"1000"、"0111" ]
+
+frequencies = capture_frequencies(sequence, patterns)
+print("Pattern frequencies:")
+for pattern, frequency in frequencies.items()：
+    print(f "pattern {pattern} 的频率：{frequency}")
+
+past, future, next_past, next_future = predict_next(sequence, 4)
+
+print("\nTime analysis:")
+print(f "Past: {past}")
+print(f "Future: {future}")
+print(f "Next past: {next_past}")
+print(f "Next future: {next_future}")
+```
+
+### 报告
+
+#### 情况
+
+这段代码扩展了二进制模式分析，包括根据时间序列预测过去和未来。predict_next "函数获取二进制序列，确定最近的过去和未来，并根据检测到的模式预测下一个过去和未来。
+
+#### 对空间技术的重要性
+
+在空间技术方面，根据过去的模式预测未来事件对导航和安全至关重要。例如，通过分析来自航天器或卫星的传感器数据，可以确定故障或异常的模式，并用于预测和避免未来的问题。这可以提高太空任务的安全性和效率。
+
+#### 行星防御
+
+对于行星防御来说，根据过去的数据预测未来事件的能力对于应对小行星逼近等威胁至关重要。通过分析历史数据的模式，我们可以预测未来的方法，并制定更有效的缓解战略。这对于保护地球免受可能的撞击至关重要。
+
+#### RNA 进化
+
+在分子生物学领域，根据过去的数据预测未来的突变或进化模式，可以在医学领域取得重大进展。了解 RNA 序列如何随时间演变，有助于创造更有效的基因疗法和预防遗传性疾病。
+
+#### 可能的生命进化特性大过滤器
+
+在大过滤器的背景下，预测从太空接收到的信号的未来模式有助于识别可能的地外生命形式。检测和分析信号中的异常模式可以提供有关先进文明及其技术存在的线索。这可能是寻找地球以外生命的关键一步。
+
+#### 结论
+
+分析和预测时间二进制模式在从空间技术到分子生物学等各个领域都有重要应用。改进这些技术可以促进空间安全、行星防御、理解 RNA 的进化和寻找地外生命，从而推动人类的科技进步。
+
+___________________________________________________________________###__________________________
+
+Чтобы создать код, который использует вектор для определения прошлого, будущего и предсказания следующего прошлого и следующего будущего, мы можем расширить предыдущий пример. Представим, что у нас есть двоичная последовательность, которая представляет события во времени. Мы можем использовать эту последовательность для выявления закономерностей и прогнозирования.
+
+### Код на Python
+
+``python
+def capture_frequencies(sequence, patterns):
+    frequencies = {pattern: 0 for pattern in patterns}
+    
+    for i in range(len(sequence) - len(patterns[0]) + 1):
+        sub_sequence = sequence[i:i + len(patterns[0])]
+        if sub_sequence in frequencies:
+            frequencies[sub_sequence] += 1
+            
+    возвращать частоты
+
+def predict_next(sequence, pattern_size):
+    if len(sequence) < 2 * size_pattern:
+        return None, None
+    
+    past = sequence[-2*pattern_size:-pattern_size]
+    future = sequence[-size_pattern:]
+    
+    next_future = sequence[-3*size_pattern:-2*size_pattern] if len(sequence) >= 3 * size_pattern else None
+    next_future = sequence[-size_pattern:] + sequence[-size_pattern:] if len(sequence) >= size_pattern else None
+    
+    return past, future, next_past, next_future
+
+# Пример использования
+sequence = "0100010001000111"
+паттерны = ["01", "0100", "1000", "0111"]
+
+frequencies = capture_frequencies(sequence, patterns)
+print("Частоты шаблонов:")
+for pattern, frequency in frequencies.items():
+    print(f "Частота паттерна {паттерн}: {частота}")
+
+past, future, next_past, next_future = predict_next(sequence, 4)
+
+print("\nВременной анализ:")
+print(f "Прошлое: {прошлое}")
+print(f "Будущее: {future}")
+print(f "Следующее прошлое: {next_past}")
+print(f "Следующее будущее: {next_future}")
+```
+
+### Отчет
+
+#### Ситуация
+
+Этот код расширяет возможности анализа двоичных шаблонов, включая предсказание прошлого и будущего на основе временной последовательности. Функция `predict_next` берет двоичную последовательность и определяет недавнее прошлое и будущее, а также предсказывает следующее прошлое и будущее на основе обнаруженных паттернов.
+
+#### Важность для космической техники
+
+В контексте космических технологий предсказание будущих событий на основе прошлых закономерностей имеет решающее значение для навигации и безопасности. Например, анализируя данные датчиков космических кораблей или спутников, можно выявить закономерности неисправностей или аномалий и использовать их для прогнозирования и предотвращения будущих проблем. Это может повысить безопасность и эффективность космических полетов.
+
+#### Планетарная оборона
+
+Для планетарной обороны способность предсказывать будущие события на основе прошлых данных очень важна для реагирования на такие угрозы, как приближающиеся астероиды. Анализируя закономерности в исторических данных, мы можем предсказать будущие подходы и разработать более эффективные стратегии борьбы с ними. Это жизненно важно для защиты Земли от возможных столкновений.
+
+#### Эволюция РНК
+
+В молекулярной биологии предсказание будущих мутаций или моделей эволюции на основе прошлых данных может привести к значительным достижениям в медицине. Понимание того, как последовательности РНК эволюционируют с течением времени, может помочь в создании более эффективных генетических терапий и предотвращении наследственных заболеваний.
+
+#### Великий фильтр возможных эволюционных свойств жизни
+
+В контексте Большого фильтра предсказание будущих закономерностей в сигналах, получаемых из космоса, может помочь идентифицировать возможные внеземные формы жизни. Обнаружение и анализ аномальных закономерностей в сигналах может дать подсказки о существовании развитых цивилизаций и их технологий. Это может стать решающим шагом в поисках жизни за пределами Земли.
+
+### Заключение
+
+Анализ и прогнозирование временных бинарных паттернов имеет важное применение в различных областях, от космических технологий до молекулярной биологии. Совершенствование этих методов может привести к достижениям в области космической безопасности, планетарной обороны, понимания эволюции РНК и поиска внеземной жизни, способствуя научно-техническому прогрессу человечества.
+
+___________________________________________________________________###__________________________
+
+To create a code that uses a vector to determine the past, the future and predict the next past and the next future, we can extend the previous example. Let's imagine that we have a binary sequence that represents events over time. We can use this sequence to identify patterns and make predictions.
+
+### Code in Python
+
+```python
+def capture_frequencies(sequence, patterns):
+    frequencies = {pattern: 0 for pattern in patterns}
+    
+    for i in range(len(sequence) - len(patterns[0]) + 1):
+        sub_sequence = sequence[i:i + len(patterns[0])]
+        if sub_sequence in frequencies:
+            frequencies[sub_sequence] += 1
+            
+    return frequencies
+
+def predict_next(sequence, pattern_size):
+    if len(sequence) < 2 * size_pattern:
+        return None, None
+    
+    past = sequence[-2*pattern_size:-pattern_size]
+    future = sequence[-size_pattern:]
+    
+    next_future = sequence[-3*size_pattern:-2*size_pattern] if len(sequence) >= 3 * size_pattern else None
+    next_future = sequence[-size_pattern:] + sequence[-size_pattern:] if len(sequence) >= size_pattern else None
+    
+    return past, future, next_past, next_future
+
+# Example of use
+sequence = "0100010001000111"
+patterns = ["01", "0100", "1000", "0111"]
+
+frequencies = capture_frequencies(sequence, patterns)
+print("Pattern frequencies:")
+for pattern, frequency in frequencies.items():
+    print(f"Frequency of pattern {pattern}: {frequency}")
+
+past, future, next_past, next_future = predict_next(sequence, 4)
+
+print("\nTime analysis:")
+print(f"Past: {past}")
+print(f"Future: {future}")
+print(f"Next past: {next_past}")
+print(f"Next future: {next_future}")
+```
+
+### Report
+
+#### Situation
+
+This code expands binary pattern analysis to include predicting the past and future based on a time sequence. The `predict_next` function takes a binary sequence and determines the recent past and future, as well as predicting the next past and future based on the detected patterns.
+
+#### Importance for Space Technology
+
+In the context of space technology, predicting future events based on past patterns is crucial for navigation and safety. For example, by analysing sensor data from spacecraft or satellites, patterns of faults or anomalies can be identified and used to predict and avoid future problems. This can increase the safety and efficiency of space missions.
+
+#### Planetary Defence
+
+For planetary defence, the ability to predict future events based on past data is essential for responding to threats such as approaching asteroids. By analysing patterns in historical data, we can predict future approaches and develop more effective mitigation strategies. This is vital for protecting the Earth from possible impacts.
+
+#### RNA Evolution
+
+In molecular biology, predicting future mutations or patterns of evolution based on past data can lead to significant advances in medicine. Understanding how RNA sequences evolve over time could help in the creation of more effective genetic therapies and the prevention of hereditary diseases.
+
+#### Great Filter of Possible Evolutionary Life Properties
+
+In the context of the Great Filter, predicting future patterns in signals received from space could help identify possible extraterrestrial life forms. Detecting and analysing anomalous patterns in signals can provide clues about the existence of advanced civilisations and their technologies. This could be a crucial step in the search for life beyond Earth.
+
+### Conclusion
+
+Analysing and predicting temporal binary patterns has important applications in various areas, from space technology to molecular biology. Improving these techniques could lead to advances in space security, planetary defence, understanding the evolution of RNA and the search for extraterrestrial life, contributing to humanity's scientific and technological progress.
+
+___________________________________________________________________###__________________________
+
+https://renan21002200.wixsite.com/renansantoscyberseo
+
+https://counterintelligencecoursescybernetics.wordpress.com/
+
+https://cyberwarfarecounterintelligence.wordpress.com/
+
+https://cyberaptsecurity.wordpress.com/
+
+https://darkstrikaptevilcorpcounterintelligency.wordpress.com/
+
+https://safehousessecurity.wordpress.com/
