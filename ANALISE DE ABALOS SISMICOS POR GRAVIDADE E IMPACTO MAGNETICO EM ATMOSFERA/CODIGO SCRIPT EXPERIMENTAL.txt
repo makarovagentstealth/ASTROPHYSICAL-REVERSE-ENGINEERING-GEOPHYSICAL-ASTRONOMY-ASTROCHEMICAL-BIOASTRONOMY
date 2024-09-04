@@ -1,0 +1,269 @@
+Aqui está um código script experimental em Python que você pode executar em dispositivos como Arduino, Raspberry Pi, ou Orange Pi. Este código simula a medição de abalos sísmicos através da observação de alterações em elementos periódicos (CO2, silício, oxigênio e H2O) usando sensores simulados. Este script é básico e serve como ponto de partida para experimentos reais.
+
+```python
+import random
+import time
+import datetime
+
+# Função para simular a leitura dos sensores
+def sensor_readings():
+    # Valores simulados para os elementos periódicos em ppm (partes por milhão)
+    co2 = random.uniform(350, 450)  # Dióxido de carbono
+    silicon = random.uniform(20, 30)  # Silício
+    oxygen = random.uniform(20, 21)  # Oxigênio
+    h2o = random.uniform(10, 20)  # Água (vapor)
+    return co2, silicon, oxygen, h2o
+
+# Função para gravar os dados coletados em um arquivo
+def log_data(timestamp, co2, silicon, oxygen, h2o, stage):
+    with open("seismic_readings.log", "a") as file:
+        file.write(f"{timestamp}, {stage}, CO2: {co2:.2f}, Silicon: {silicon:.2f}, Oxygen: {oxygen:.2f}, H2O: {h2o:.2f}\n")
+
+# Função principal que simula as medições antes, durante e depois do abalo sísmico
+def measure_seismic_activity():
+    stages = ["Antes do Abalo", "Durante o Abalo", "Depois do Abalo"]
+
+    for stage in stages:
+        print(f"\n{stage}:")
+        for _ in range(10):  # Simulando 10 leituras para cada estágio
+            co2, silicon, oxygen, h2o = sensor_readings()
+            timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            log_data(timestamp, co2, silicon, oxygen, h2o, stage)
+            print(f"Time: {timestamp} | CO2: {co2:.2f} ppm | Silicon: {silicon:.2f} ppm | Oxygen: {oxygen:.2f} ppm | H2O: {h2o:.2f} ppm")
+            time.sleep(1)  # Intervalo de 1 segundo entre leituras
+
+# Executa a medição de abalos sísmicos
+if __name__ == "__main__":
+    print("Iniciando o monitoramento de abalos sísmicos através de elementos periódicos...\n")
+    measure_seismic_activity()
+    print("\nMonitoramento completo. Dados registrados em 'seismic_readings.log'.")
+```
+
+### Explicação do Código:
+
+1. **Simulação de Leitura dos Sensores (`sensor_readings`)**:
+   - A função `sensor_readings()` simula a leitura dos valores de CO2, silício, oxigênio e vapor de água na atmosfera. Esses valores são gerados aleatoriamente dentro de uma faixa esperada.
+
+2. **Gravação dos Dados (`log_data`)**:
+   - A função `log_data()` grava as leituras dos sensores em um arquivo de log (`seismic_readings.log`), junto com a data, hora e estágio da medição (antes, durante, depois).
+
+3. **Medição de Atividade Sísmica (`measure_seismic_activity`)**:
+   - A função `measure_seismic_activity()` executa o processo de medição em três estágios: antes, durante e depois do abalo sísmico. Para cada estágio, 10 leituras são realizadas e registradas.
+
+4. **Execução Principal**:
+   - O script é executado e as medições são registradas no arquivo de log, permitindo uma análise posterior.
+
+### Uso Prático:
+- Este script pode ser adaptado para trabalhar com sensores reais em um dispositivo como o Raspberry Pi. Sensores de gás (como o MQ-135) podem ser utilizados para detectar CO2, e sensores de pressão ou umidade podem ser utilizados para outros elementos.
+- Embora este código seja uma simulação, ele oferece uma base para o desenvolvimento de um sistema mais complexo para a detecção e análise de abalos sísmicos com base em alterações nos elementos periódicos abaixo da atmosfera terrestre.
+
+### Observação:
+Este código é experimental e deve ser testado e ajustado conforme necessário em um ambiente controlado. Ele não substitui os métodos tradicionais de medição sísmica, mas serve como uma nova abordagem para explorar.
+
+___________________________________________________________________###__________________________
+
+这里有一个 Python 实验脚本代码，您可以在 Arduino、Raspberry Pi 或 Orange Pi 等设备上运行。该代码通过使用模拟传感器观察周期元素（二氧化碳、硅、氧和水）的变化来模拟测量地震震动。本脚本是基本脚本，可作为实际实验的起点。
+
+```python
+导入随机
+导入时间
+导入日期时间
+
+# 模拟传感器读数的函数
+def sensor_readings()：
+    # 以 ppm（百万分之一）为单位的周期元素模拟值
+    co2 = random.uniform(350, 450) # 二氧化碳
+    硅 = random.uniform(20, 30) # 硅
+    oxygen = random.uniform(20, 21) # 氧气
+    h2o = random.uniform(10, 20) # 水（蒸汽）
+    return co2, silicon, oxygen, h2o
+
+# 将收集的数据保存到文件的函数
+def log_data(timestamp, co2, silicon, oxygen, h2o, stage)：
+    with open(“seismic_readings.log”, “a”) as file：
+        file.write(f“{timestamp}, {stage}, CO2: {co2:.2f}, Silicon: {silicon:.2f}, Oxygen: {oxygen:.2f}, H2O: {h2o:.2f}\n”)
+
+# 模拟地震震前、震中和震后测量的主函数
+def measure_seismic_activity()：
+    stages = [ “震前”、“震中”、“震后”］
+
+    for stage in stages：
+        print(f“\n{stage}:”)
+        for _ in range(10): # 每个阶段模拟 10 个读数
+            co2, silicon, oxygen, h2o = sensor_readings()
+            timestamp = datetime.datetime.now().strftime(“%Y-%m-%d %H:%M:%S”)
+            log_data(timestamp, co2, silicon, oxygen, h2o, stage)
+            print(f “Time: {timestamp} | CO2: {co2:.2f} ppm | Silicon: {silicon:.2f} ppm | Oxygen: {oxygen:.2f} ppm | H2O: {h2o:.2f} ppm”)
+            time.sleep(1) # 两次读数间隔 1 秒钟
+
+# 执行地震震动测量
+if __name__ == “__main__”：
+    print(“Starting seismic shaking monitoring using periodic elements...\n”)
+    measure_seismic_activity()
+    print(“\nMonitoring complete. Data recorded in ‘seismic_readings.log’.”)
+```
+
+#### 代码解释：
+
+1. **传感器读数模拟 (`sensor_readings`)**：
+   - sensor_readings() "函数模拟大气中二氧化碳、硅、氧气和水蒸气的读数。这些数值在预期范围内随机生成。
+
+2. **数据记录（`log_data`）**：
+   - log_data() “函数将传感器读数记录在日志文件（”seismic_readings.log"）中，同时记录日期、时间和测量阶段（测量前、测量中、测量后）。
+
+3. **地震活动测量（`measure_seismic_activity`）**：
+   - measure_seismic_activity()`函数将测量过程分为三个阶段：地震前、地震中和地震后。每个阶段都会采集并记录 10 个读数。
+
+4. **主要运行**：
+   - 执行脚本并将测量结果记录在日志文件中，以便日后分析。
+
+#### 实际使用：
+- 此脚本可与 Raspberry Pi 等设备上的真实传感器配合使用。气体传感器（如 MQ-135）可用于检测二氧化碳，压力或湿度传感器可用于检测其他元素。
+- 虽然这只是一个模拟代码，但它为开发一个更复杂的系统提供了基础，该系统可根据地球大气层下周期元素的变化来探测和分析地震震动。
+
+### 注意：
+本代码为实验代码，应在受控环境中进行必要的测试和调整。它不能取代传统的地震测量方法，但可作为一种新的探索方法。
+
+___________________________________________________________________###__________________________
+
+
+Перед вами экспериментальный скрипт на языке Python, который вы можете запустить на таких устройствах, как Arduino, Raspberry Pi или Orange Pi. Этот код имитирует измерение сейсмических толчков путем наблюдения за изменениями в периодических элементах (CO2, кремний, кислород и H2O) с помощью смоделированных датчиков. Этот скрипт является базовым и служит отправной точкой для реальных экспериментов.
+
+``python
+импорт random
+импорт времени
+import datetime
+
+# Функция для имитации показаний датчиков
+def sensor_readings():
+    # Моделируемые значения для периодических элементов в ppm (частях на миллион)
+    co2 = random.uniform(350, 450) # Двуокись углерода
+    кремний = random.uniform(20, 30) # Кремний
+    кислород = random.uniform(20, 21) # Кислород
+    h2o = random.uniform(10, 20) # Вода (пар)
+    return co2, silicon, oxygen, h2o
+
+# Функция для сохранения собранных данных в файл
+def log_data(timestamp, co2, silicon, oxygen, h2o, stage):
+    with open(«seismic_readings.log», «a») as file:
+        file.write(f«{timestamp}, {stage}, CO2: {co2:.2f}, Silicon: {silicon:.2f}, Oxygen: {oxygen:.2f}, H2O: {h2o:.2f}\n»)
+
+# Основная функция, которая моделирует измерения до, во время и после сейсмического толчка
+def measure_seismic_activity():
+    stages = [«До землетрясения», «Во время землетрясения», «После землетрясения»].
+
+    for stage in stages:
+        print(f«\n{stage}:»)
+        for _ in range(10): # Моделирование 10 показаний для каждой стадии
+            co2, кремний, кислород, h2o = sensor_readings()
+            timestamp = datetime.datetime.now().strftime(«%Y-%m-%d %H:%M:%S»)
+            log_data(timestamp, co2, silicon, oxygen, h2o, stage)
+            print(f «Time: {timestamp} | CO2: {co2:.2f} ppm | Silicon: {silicon:.2f} ppm | Oxygen: {oxygen:.2f} ppm | H2O: {h2o:.2f} ppm»)
+            time.sleep(1) # Интервал между считываниями 1 секунда
+
+# Выполняет измерение сейсмической тряски
+if __name__ == «__main__»:
+    print(«Запускаем мониторинг сейсмической тряски с помощью периодических элементов...\n»)
+    measure_seismic_activity()
+    print(«\nМониторинг завершен. Данные записаны в „seismic_readings.log“.»)
+```
+
+### Объяснение кода:
+
+1. **Симуляция показаний датчиков (`sensor_readings)**:
+   - Функция `sensor_readings()` имитирует считывание значений CO2, кремния, кислорода и водяного пара в атмосфере. Эти значения генерируются случайным образом в пределах ожидаемого диапазона.
+
+2. **Запись данных (`log_data`)**:
+   - Функция `log_data()` записывает показания датчиков в файл журнала (`seismic_readings.log`), а также дату, время и этап измерения (до, во время, после).
+
+3. **Измерение сейсмической активности (`measure_seismic_activity`)**:
+   - Функция `measure_seismic_activity()` запускает процесс измерения в три этапа: до, во время и после сейсмического толчка. На каждом этапе снимается и записывается 10 показаний.
+
+4. **Основной запуск**:
+   - Сценарий выполняется, и результаты измерений записываются в файл журнала, что позволяет провести последующий анализ.
+
+### Практическое использование:
+- Этот скрипт может быть адаптирован для работы с реальными датчиками на таком устройстве, как Raspberry Pi. Газовые датчики (например, MQ-135) можно использовать для обнаружения CO2, а датчики давления или влажности - для других элементов.
+- Хотя этот код является симуляцией, он служит основой для разработки более сложной системы обнаружения и анализа сейсмических толчков, основанной на изменениях в периодических элементах под атмосферой Земли.
+
+### Примечание:
+Данный код является экспериментальным и должен быть протестирован и скорректирован при необходимости в контролируемой среде. Он не заменяет традиционные методы сейсмических измерений, а служит новым подходом для изучения.
+
+___________________________________________________________________###__________________________
+
+
+Here is an experimental script code in Python that you can run on devices such as Arduino, Raspberry Pi, or Orange Pi. This code simulates the measurement of seismic tremors by observing changes in periodic elements (CO2, silicon, oxygen and H2O) using simulated sensors. This script is basic and serves as a starting point for real experiments.
+
+```python
+import random
+import time
+import datetime
+
+# Function to simulate sensor readings
+def sensor_readings():
+    # Simulated values for the periodic elements in ppm (parts per million)
+    co2 = random.uniform(350, 450) # Carbon dioxide
+    silicon = random.uniform(20, 30) # Silicon
+    oxygen = random.uniform(20, 21) # Oxygen
+    h2o = random.uniform(10, 20) # Water (vapour)
+    return co2, silicon, oxygen, h2o
+
+# Function to save the collected data to a file
+def log_data(timestamp, co2, silicon, oxygen, h2o, stage):
+    with open(‘seismic_readings.log’, ‘a’) as file:
+        file.write(f‘{timestamp}, {stage}, CO2: {co2:.2f}, Silicon: {silicon:.2f}, Oxygen: {oxygen:.2f}, H2O: {h2o:.2f}\n’)
+
+# Main function that simulates the measurements before, during and after the seismic tremor
+def measure_seismic_activity():
+    stages = [‘Before the Shake’, ‘During the Shake’, ‘After the Shake’]
+
+    for stage in stages:
+        print(f‘\n{stage}:’)
+        for _ in range(10): # Simulating 10 readings for each stage
+            co2, silicon, oxygen, h2o = sensor_readings()
+            timestamp = datetime.datetime.now().strftime(‘%Y-%m-%d %H:%M:%S’)
+            log_data(timestamp, co2, silicon, oxygen, h2o, stage)
+            print(f‘Time: {timestamp} | CO2: {co2:.2f} ppm | Silicon: {silicon:.2f} ppm | Oxygen: {oxygen:.2f} ppm | H2O: {h2o:.2f} ppm’)
+            time.sleep(1) # 1 second interval between readings
+
+# Performs seismic shaking measurement
+if __name__ == ‘__main__’:
+    print(‘Starting seismic shaking monitoring using periodic elements...\n’)
+    measure_seismic_activity()
+    print(‘\nMonitoring complete. Data recorded in “seismic_readings.log”.’)
+```
+
+### Code Explanation:
+
+1. **Sensor reading simulation (`sensor_readings`)**:
+   - The `sensor_readings()` function simulates the reading of CO2, silicon, oxygen and water vapour values in the atmosphere. These values are randomly generated within an expected range.
+
+2. **Data recording (`log_data`)**:
+   - The `log_data()` function records the sensor readings in a log file (`seismic_readings.log`), along with the date, time and stage of the measurement (before, during, after).
+
+3. **Seismic Activity Measurement (`measure_seismic_activity`)**:
+   - The `measure_seismic_activity()` function runs the measurement process in three stages: before, during and after the seismic tremor. For each stage, 10 readings are taken and recorded.
+
+4. **Main Run**:
+   - The script is executed and the measurements are recorded in the log file, allowing later analysis.
+
+### Practical Use:
+- This script can be adapted to work with real sensors on a device such as the Raspberry Pi. Gas sensors (such as the MQ-135) can be used to detect CO2, and pressure or humidity sensors can be used for other elements.
+- Although this code is a simulation, it provides a basis for developing a more complex system for detecting and analysing seismic tremors based on changes in the periodic elements below the Earth's atmosphere.
+
+### Note:
+This code is experimental and should be tested and adjusted as necessary in a controlled environment. It does not replace traditional seismic measurement methods, but serves as a new approach to explore.
+
+___________________________________________________________________###__________________________
+
+https://renan21002200.wixsite.com/renansantoscyberseo
+
+https://counterintelligencecoursescybernetics.wordpress.com/
+
+https://cyberwarfarecounterintelligence.wordpress.com/
+
+https://cyberaptsecurity.wordpress.com/
+
+https://darkstrikaptevilcorpcounterintelligency.wordpress.com/
+
+https://safehousessecurity.wordpress.com/
