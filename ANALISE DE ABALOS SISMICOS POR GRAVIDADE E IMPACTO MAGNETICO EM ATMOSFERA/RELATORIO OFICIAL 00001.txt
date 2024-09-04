@@ -1,0 +1,169 @@
+### Relatório: Medição de Abalos Sísmicos através da Gravidade e Elementos Periódicos
+
+#### Introdução
+A medição de abalos sísmicos historicamente é feita através da escala Richter, que quantifica a magnitude do terremoto baseado na amplitude das ondas sísmicas. Este relatório propõe uma técnica experimental que, ao invés de se basear apenas nas ondas sísmicas, utiliza a distensão da frequência gravitacional para medir os abalos sísmicos, analisando a absorção de elementos periódicos como CO2, silício, oxigênio e H2O durante e após o evento sísmico.
+
+#### Metodologia
+
+##### 1. **Dispositivos e Componentes Utilizados**
+   - **Hardware**: Dispositivos como telemóveis, Arduino, Raspberry Pi ou Orange Pi.
+   - **Sensores**: Sensores de gravidade e espectrômetros para detectar variações na absorção de elementos periódicos.
+   - **Elementos Periódicos**: CO2, silício, oxigênio e H2O, que são analisados pela sua variação na frequência gravitacional durante um abalo sísmico.
+
+##### 2. **Código Script**
+   - Um script é executado em um emulador de terminal que permite a análise da distensão da frequência gravitacional.
+   - O script coleta dados dos sensores mencionados acima, medindo a absorção dos elementos CO2, silício, oxigênio e H2O antes, durante e após o abalo sísmico.
+
+##### 3. **Processo de Análise**
+   - **Antes do Abalo**: Estabelece-se uma linha de base para a absorção dos elementos periódicos. A frequência gravitacional é medida em condições estáveis.
+   - **Durante o Abalo**: Monitora-se a variação nas frequências gravitacionais e a absorção dos elementos. Mudanças significativas podem indicar a proximidade do epicentro ou a intensidade do abalo.
+   - **Depois do Abalo**: As medições continuam para identificar qualquer alteração residual na absorção dos elementos, o que pode fornecer informações sobre a magnitude e o impacto do abalo.
+
+##### 4. **Comparação com a Datação por Carbono-14**
+   - Assim como na datação por Carbono-14, onde a degradação de elementos radioativos é medida para determinar a idade de objetos, essa técnica mede a variação na absorção dos elementos periódicos para inferir a natureza do abalo sísmico.
+
+#### Resultados Esperados
+- **Identificação da Natureza do Abalo**: Através da variação dos elementos, pode-se inferir a causa e a intensidade do abalo.
+- **Análise Preditiva**: Em casos de abalos contínuos ou réplicas, a técnica pode ajudar a prever futuras ocorrências com base nas mudanças nos padrões de absorção.
+- **Validação Experimental**: Como esta técnica é experimental, espera-se que os resultados possam ser usados para melhorar a compreensão dos efeitos dos abalos sísmicos na atmosfera e nos elementos presentes na crosta terrestre.
+
+#### Limitações
+- **Método Experimental**: Esta técnica está em fase experimental e ainda não substitui as metodologias tradicionais, como a escala Richter.
+- **Sensibilidade dos Dispositivos**: A precisão dos resultados depende da sensibilidade dos sensores e dispositivos utilizados.
+- **Complexidade**: O método envolve uma análise complexa que pode não ser acessível para todas as comunidades científicas ou regiões afetadas por abalos sísmicos.
+
+#### Considerações Finais
+Este relatório apresenta uma técnica inovadora e experimental para medir abalos sísmicos usando a distensão da frequência gravitacional e a análise da absorção de elementos periódicos. Apesar de promissora, a técnica ainda precisa ser refinada e validada antes de poder ser considerada uma alternativa prática e acessível para a humanidade. A equipe DarkStrike APT continua a explorar outros métodos mais simples e eficazes para detectar e analisar abalos sísmicos dentro da atmosfera terrestre.
+
+___________________________________________________________________###__________________________
+
+### 报告：利用重力和周期元素测量地震振动
+
+#### 简介
+一直以来，地震震动都是通过里氏震级来测量的，里氏震级根据地震波的振幅来量化地震的震级。本报告提出了一种实验技术，即不单纯依靠地震波，而是利用重力频率拉伸来测量地震，分析地震发生时和发生后对二氧化碳、硅、氧和水等周期元素的吸收情况。
+
+#### 方法
+
+##### 1. 使用的**设备和组件**
+   - 硬件：手机、Arduino、Raspberry Pi 或 Orange Pi 等设备。
+   - 传感器：重力传感器和光谱仪，用于检测周期元素吸收的变化。
+   - 周期元素：二氧化碳、硅、氧和水，通过地震震颤时重力频率的变化进行分析。
+
+##### 2. **脚本代码
+   - 在终端模拟器中运行脚本，分析重力频率的变化。
+   - 该脚本从上述传感器收集数据，测量地震前、地震中和地震后二氧化碳、硅、氧和水等元素的吸收情况。
+
+##### 3. **分析过程
+   - 震前：建立周期元素吸收基线。在稳定条件下测量重力频率。
+   - 震中：监测重力频率和元素吸收的变化。显著的变化可以表明震中的距离或震颤的强度。
+   - 震后 继续进行测量，以确定元素吸收的任何残余变化，从而提供有关震级和地震影响的信息。
+
+##### 4. **与碳-14 测定法的比较**
+   - 碳-14 测定法是通过测量放射性元素的衰变来确定物体的年龄，这项技术也是通过测量周期性元素吸收的变化来推断地震的性质。
+
+#### 预期结果
+- 确定地震的性质： 通过元素的变化，可以推断出地震的原因和强度。
+- 预测分析**：在连续震动或余震的情况下，该技术有助于根据吸收模式的变化预测未来发生的地震。
+- 实验验证**：由于该技术是实验性的，希望其结果能用于提高人们对地震震波对大气层和地壳中存在的元素的影响的认识。
+
+#### 限制
+- 实验方法**：该技术尚处于实验阶段，还不能取代里氏震级等传统方法。
+- 设备灵敏度**： 结果的准确性取决于所用传感器和设备的灵敏度。
+- 复杂性： 该方法涉及复杂的分析，并非所有科学界或受地震影响的地区都能使用。
+
+#### 最后的考虑
+
+本报告介绍了一种利用重力频率拉伸和周期元素吸收分析测量地震的创新实验技术。尽管该技术前景广阔，但仍需加以改进和验证，才能被视为人类切实可行和可以使用的替代方法。DarkStrike APT 团队将继续探索其他更简单、更有效的方法，以探测和分析地球大气层中的地震震颤。
+
+
+___________________________________________________________________###__________________________
+
+### Отчет: Измерение сейсмической тряски с помощью гравитационных и периодических элементов
+
+#### Введение
+Исторически сейсмические толчки измерялись с помощью шкалы Рихтера, которая определяет магнитуду землетрясения по амплитуде сейсмических волн. В данном докладе предлагается экспериментальная методика, которая вместо того, чтобы полагаться исключительно на сейсмические волны, использует гравитационное распределение частоты для измерения землетрясений, анализируя поглощение периодических элементов, таких как CO2, кремний, кислород и H2O, во время и после сейсмического события.
+
+#### Методология
+
+##### 1. **Используемые устройства и компоненты**.
+   - Оборудование: такие устройства, как мобильные телефоны, Arduino, Raspberry Pi или Orange Pi.
+   - Датчики: гравитационные датчики и спектрометры для обнаружения изменений в поглощении периодических элементов.
+   - Периодические элементы: CO2, кремний, кислород и H2O, которые анализируются по изменению их гравитационной частоты во время сейсмического толчка.
+
+##### 2. ** Код скрипта
+   - В эмуляторе терминала запускается скрипт, который позволяет анализировать изменение гравитационной частоты.
+   - Скрипт собирает данные с вышеупомянутых датчиков, измеряя поглощение элементов CO2, кремния, кислорода и H2O до, во время и после землетрясения.
+
+##### 3. **Процесс анализа
+   - До землетрясения: устанавливается базовая линия для поглощения периодических элементов. Гравитационная частота измеряется в стабильных условиях.
+   - Во время тряски: отслеживается изменение гравитационных частот и поглощение элементов. Значительные изменения могут указывать на близость эпицентра или интенсивность сотрясения.
+   - После сотрясения Измерения продолжаются, чтобы выявить любые остаточные изменения в поглощении элементов, которые могут дать информацию о силе и воздействии землетрясения.
+
+##### 4. **Сравнение с датированием по углероду-14**
+   - Как и в случае с датированием по углероду-14, когда распад радиоактивных элементов измеряется для определения возраста объектов, в данной методике измеряется изменение поглощения периодических элементов, чтобы сделать вывод о характере землетрясения.
+
+#### Ожидаемые результаты
+- Определение природы подземных толчков: По изменению элементов можно определить причину и интенсивность сотрясения.
+- Прогностический анализ**: в случаях непрерывных толчков или афтершоков метод может помочь предсказать будущие события на основе изменений в характере поглощения.
+- Экспериментальная проверка**: поскольку данная методика является экспериментальной, можно надеяться, что ее результаты будут использованы для улучшения понимания влияния сейсмических толчков на атмосферу и элементы, присутствующие в земной коре.
+
+#### Ограничения
+- Экспериментальный метод**: данная методика находится на стадии эксперимента и пока не заменяет традиционные методики, такие как шкала Рихтера.
+- Чувствительность прибора**: Точность результатов зависит от чувствительности используемых датчиков и устройств.
+- Сложность: Метод предполагает сложный анализ, который может быть доступен не всем научным сообществам или регионам, подверженным землетрясениям.
+
+#### Заключительные соображения
+В данном докладе представлена инновационная экспериментальная методика измерения землетрясений с использованием гравитационного частотного растяжения и анализа поглощения периодических элементов. Несмотря на многообещающие перспективы, методика нуждается в доработке и проверке, прежде чем ее можно будет считать практичной и доступной альтернативой для человечества. Команда DarkStrike APT продолжает изучать другие более простые и эффективные методы обнаружения и анализа сейсмических толчков в атмосфере Земли.
+
+___________________________________________________________________###__________________________
+
+### Report: Seismic Shaking Measurement using Gravity and Periodic Elements
+
+#### Introduction
+Historically, seismic tremors have been measured using the Richter scale, which quantifies the magnitude of the earthquake based on the amplitude of the seismic waves. This report proposes an experimental technique that, instead of relying solely on seismic waves, uses gravitational frequency distension to measure earthquakes, analysing the absorption of periodic elements such as CO2, silicon, oxygen and H2O during and after the seismic event.
+
+#### Methodology
+
+##### 1. **Devices and Components Used**
+   - Hardware: Devices such as mobile phones, Arduino, Raspberry Pi or Orange Pi.
+   - Sensors: Gravity sensors and spectrometers to detect variations in the absorption of periodic elements.
+   - Periodic elements: CO2, silicon, oxygen and H2O, which are analysed by their variation in gravitational frequency during a seismic tremor.
+
+##### 2. **Script code
+   - A script is run in a terminal emulator that allows the gravitational frequency distension to be analysed.
+   - The script collects data from the sensors mentioned above, measuring the absorption of the elements CO2, silicon, oxygen and H2O before, during and after the earthquake.
+
+##### 3. **Analysis Process
+   - Before the Shake: A baseline is established for the absorption of the periodic elements. The gravitational frequency is measured under stable conditions.
+   - During the Shake: The variation in gravitational frequencies and the absorption of the elements is monitored. Significant changes can indicate the proximity of the epicentre or the intensity of the tremor.
+   - After the Shake Measurements continue to identify any residual change in the absorption of the elements, which can provide information on the magnitude and impact of the quake.
+
+##### 4. **Comparison with Carbon-14 Dating**
+   - As with Carbon-14 dating, where the decay of radioactive elements is measured to determine the age of objects, this technique measures the variation in the absorption of periodic elements to infer the nature of the earthquake.
+
+#### Expected Results
+- Identification of the nature of the tremor: Through the variation of the elements, the cause and intensity of the tremor can be inferred.
+- Predictive Analysis**: In cases of continuous shaking or aftershocks, the technique can help predict future occurrences based on changes in absorption patterns.
+- Experimental Validation**: As this technique is experimental, it is hoped that the results can be used to improve understanding of the effects of seismic tremors on the atmosphere and the elements present in the earth's crust.
+
+#### Limitations
+- Experimental Method**: This technique is in the experimental phase and does not yet replace traditional methodologies such as the Richter scale.
+- Device sensitivity**: The accuracy of the results depends on the sensitivity of the sensors and devices used.
+- Complexity: The method involves a complex analysis that may not be accessible to all scientific communities or regions affected by earthquakes.
+
+#### Final considerations
+This report presents an innovative and experimental technique for measuring earthquakes using gravitational frequency distension and periodic element absorption analysis. Although promising, the technique still needs to be refined and validated before it can be considered a practical and accessible alternative for humanity. The DarkStrike APT team continues to explore other simpler and more effective methods for detecting and analysing seismic tremors within the Earth's atmosphere.
+
+___________________________________________________________________###__________________________
+
+https://renan21002200.wixsite.com/renansantoscyberseo
+
+https://counterintelligencecoursescybernetics.wordpress.com/
+
+https://cyberwarfarecounterintelligence.wordpress.com/
+
+https://cyberaptsecurity.wordpress.com/
+
+https://darkstrikaptevilcorpcounterintelligency.wordpress.com/
+
+https://safehousessecurity.wordpress.com/
